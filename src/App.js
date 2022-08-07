@@ -1,10 +1,22 @@
 import React from 'react';
-
+import { Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Starred from './pages/Starred';
 function App() {
   return (
-    <div>
-      h1
-    </div>
+    <>
+      <Switch>
+        <Route exact={true} path="/">
+          <Home />
+        </Route>
+        <Route exact={true} path="/starred">
+          <Starred />
+        </Route>
+        <Route>
+          This is a 404 Page. The Page you are looking is not Available
+        </Route>
+      </Switch>
+    </>
   );
 }
 
