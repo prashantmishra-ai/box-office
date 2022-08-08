@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import FadeIn from 'react-fade-in';
 export const SearchCard = styled.div`
   width: 300px;
   height: 100%;
@@ -18,7 +19,6 @@ export const SearchCard = styled.div`
     }
   }
 
-
   h1 {
     margin: 10px 0;
     font-size: 21px;
@@ -29,16 +29,16 @@ export const SearchCard = styled.div`
   }
 `;
 
-export const FlexGrid = styled.div`
-  display:flex;
-  justify-content :center;
-  flex-wrap : wrap
-`
+export const FlexGrid = styled(FadeIn)`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
 export const Star = styled.div`
   display: inline-block;
   width: 18px;
   height: 18px;
-  background-color: ${props => (props.active ? "#ffc806": "#ddd")};
+  background-color: ${props => (props.active ? '#ffc806' : '#ddd')};
   clip-path: polygon(
     50% 0%,
     61% 35%,
